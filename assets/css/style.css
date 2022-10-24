@@ -1,4 +1,4 @@
-/* ========== General Styles ========== */
+/* --------------- General Styles --------------- */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* font-family: 'Montserrat', sans-serif; */
@@ -14,12 +14,16 @@ h2, h3, p {
   color: rgb(72, 116, 157);
 }
 
-/* ========== Header Styles ========== */
+p {
+  line-height: 1.5;
+}
+
+/* --------------- Header --------------- */
 header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 5vh 8%;
+  padding: 4vh 8%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -68,14 +72,16 @@ nav a:hover::after {
   flex-wrap: wrap;
   margin: 15vh 0;
   padding: 10vh 8% 0 8%;
-  background-color: rgb(145, 180, 212);
+  background: linear-gradient(156deg, rgba(72, 116, 157, 0.5886948529) 14%, rgba(245, 198, 92, 0.8) 100%);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 #intro article {
-  width: 40%;
+  width: 42%;
   padding: 5vh 0;
 }
 #intro article h2 {
-  font-size: 3em;
+  font-size: 3.2em;
   color: white;
 }
 #intro article h1 {
@@ -89,14 +95,14 @@ nav a:hover::after {
   padding: 10px 15px;
   border-radius: 10px;
   text-decoration: none;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 #intro article a:hover {
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
   background: rgb(249, 223, 163);
 }
 #intro img {
-  width: 50%;
+  width: 49%;
   display: block;
   margin-bottom: -100px;
   border-radius: 10px;
@@ -121,8 +127,20 @@ nav a:hover::after {
 .youAreDeep p, .iAmDeep p {
   padding: 2vh 8%;
   background-color: rgb(200, 211, 221);
-  border-radius: 10px;
-  height: 30vh;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 20;
+  overflow: scroll;
+  transition: all 0.5s linear;
+}
+.youAreDeep p:hover, .iAmDeep p:hover {
+  background: rgba(245, 198, 92, 0.8);
+  color: rgb(72, 116, 157);
+  transition: all 0.5s linear;
+}
+
+.iAmDeep p {
+  height: 35vh;
 }
 
 /* ----- About Me ----- */
@@ -132,6 +150,20 @@ nav a:hover::after {
   height: 60vh;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+/* ----- costs ----- */
+#costs article {
+  margin-bottom: 7vh;
+}
+#costs article h2 {
+  margin-bottom: 2vh;
+}
+#costs article p {
+  margin-bottom: 1vh;
+}
+#costs article p span {
+  font-weight: bold;
 }
 
 /* --------------- Footer --------------- */
@@ -153,10 +185,80 @@ footer article p {
 footer article a {
   color: rgb(72, 116, 157);
   text-decoration: none;
+  transition: all 0.2s linear;
 }
 footer article a:hover {
-  color: rgb(245, 198, 92);
+  color: rgb(200, 153, 42);
+  font-weight: bold;
   text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+@media only screen and (max-width: 850px) {
+  header p {
+    font-size: 18px;
+  }
+  header nav a {
+    font-size: 15px;
+  }
+  #intro {
+    padding: 8vh 8% 0 8%;
+    margin: 10vh 0;
+  }
+  #intro article {
+    padding: 2vh 0;
+  }
+  #intro article h2 {
+    font-size: 1.8em;
+  }
+  #intro article h1 {
+    font-size: 1.5em;
+    margin: 2vh 0 3vh 0;
+    color: white;
+  }
+  .youAreDeep, .iAmDeep {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .iAmDeep p {
+    height: 20vh;
+  }
+  #aboutMe {
+    margin: 5vh 0;
+    height: 40vh;
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 450px) {
+  header p {
+    font-size: 18px;
+  }
+  header nav {
+    display: none;
+  }
+  #intro {
+    display: block;
+    padding: 5vh 8% 5vh 8%;
+    margin: 10vh 0 0 0;
+  }
+  #intro article {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+  #intro img {
+    width: 100%;
+  }
+  .youAreDeep, .iAmDeep {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #aboutMe {
+    margin: 5vh 0;
+  }
+  #costs {
+    padding: 2vh 8%;
+  }
+  footer article {
+    margin-top: 1vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
