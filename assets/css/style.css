@@ -10,7 +10,7 @@
   scroll-behavior: smooth;
 }
 
-h2 {
+h2, p {
   color: rgb(72, 116, 157);
 }
 
@@ -103,17 +103,29 @@ nav a:hover::after {
   padding: 5vh 8%;
 }
 
-.iAmDeep, .youAreDeep {
+.youAre h2, .iAm h2 {
+  margin: 8vh 0 3vh 0;
+}
+
+.youAreDeep, .iAmDeep {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  column-gap: 25px;
+  row-gap: 20px;
 }
-.iAmDeep div, .youAreDeep div {
-  padding: 2vh 2%;
+.youAreDeep p, .iAmDeep p {
+  padding: 2vh 8%;
+  background-color: rgb(200, 211, 221);
+  border-radius: 10px;
+  height: 30vh;
 }
 
 /* ----- About Me ----- */
 #aboutMe {
+  margin: 10vh 0;
   background: rgb(249, 223, 163);
+  height: 60vh;
 }
 
 /*# sourceMappingURL=style.css.map */
