@@ -11,6 +11,11 @@
     scroll-behavior: smooth;
 }
 
+body {
+    max-width: 1440px;
+    margin: 0 auto; 
+}
+
 h2, h3, p {
     color: rgb(72, 116, 157);
 }
@@ -32,6 +37,7 @@ span {
 
 /* --------------- Header --------------- */
 header  {
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
