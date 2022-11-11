@@ -80,6 +80,17 @@ nav a:hover::after {
   transform-origin: left;
 }
 
+.hidden {
+  display: none;
+}
+
+.hiddenMobile {
+  display: none;
+}
+
+/* .visible {
+    display: block; 
+} */
 /* --------------- Main --------------- */
 /* ----- Introduction ----- */
 #intro {
@@ -212,8 +223,49 @@ footer article a:hover {
   header p {
     font-size: 18px;
   }
-  header nav a {
-    font-size: 15px;
+  header .sidepanel {
+    height: 250px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(72, 116, 157, 0.3); /* Black*/
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  header .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(72, 116, 157);
+    display: block;
+    transition: 0.3s;
+  }
+  header .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  header .openbtn, header .closebtn {
+    display: block;
+  }
+  header .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  header .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  header .openbtn:hover {
+    background-color: #444;
   }
   #intro {
     padding: 8vh 8% 0 8%;
