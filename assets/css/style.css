@@ -39,7 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 4vh 8%;
+  padding: 1.8vh 8%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -219,9 +219,9 @@ footer article a:hover {
   transition: all 0.2s linear;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1050px) {
   header p {
-    font-size: 18px;
+    font-size: 24px;
   }
   header .sidepanel {
     height: 250px;
@@ -230,18 +230,18 @@ footer article a:hover {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgba(72, 116, 157, 0.3); /* Black*/
+    background-color: rgba(72, 116, 157, 0.6);
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s;
+    transition: 0.2s;
   }
   header .sidepanel a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
-    color: rgb(72, 116, 157);
+    color: white;
     display: block;
-    transition: 0.3s;
+    transition: 0.2s;
   }
   header .sidepanel a:hover {
     color: #f1f1f1;
@@ -259,9 +259,10 @@ footer article a:hover {
   header .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: rgba(72, 116, 157, 0.6);
+    border-radius: 5px;
     color: white;
-    padding: 10px 15px;
+    padding: 5px 15px;
     border: none;
   }
   header .openbtn:hover {
@@ -272,14 +273,14 @@ footer article a:hover {
     margin: 10vh 0;
   }
   #intro article {
-    padding: 2vh 0;
+    padding: 2vh 0 8vh 0;
   }
   #intro article h2 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   #intro article h1 {
-    font-size: 1.5em;
-    margin: 2vh 0 3vh 0;
+    font-size: 1.8em;
+    margin: 2vh 0 5vh 0;
     color: white;
   }
   .youAreDeep, .iAmDeep {
@@ -298,9 +299,6 @@ footer article a:hover {
   header p {
     font-size: 18px;
   }
-  header nav {
-    display: none;
-  }
   #intro {
     display: block;
     padding: 5vh 8% 5vh 8%;
@@ -313,14 +311,23 @@ footer article a:hover {
   #intro img {
     width: 100%;
   }
+  #introDetails {
+    margin-top: 10vh;
+  }
   .youAreDeep, .iAmDeep {
     grid-template-columns: repeat(1, 1fr);
   }
   #aboutMe {
     margin: 5vh 0;
   }
+  .chapterTopic {
+    font-size: 2rem;
+  }
   #costs {
     padding: 2vh 8%;
+  }
+  footer {
+    font-size: 0.8rem;
   }
   footer article {
     margin-top: 1vh;

@@ -4,7 +4,6 @@
 /* font-family: 'Montserrat', sans-serif; */
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +42,7 @@ header  {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 4vh 8%; 
+    padding: 1.8vh 8%; 
     position: fixed;
     top: 0;
     width: 100%;
@@ -238,133 +237,8 @@ footer {
     }
 }
 
-@media only screen and (max-width: 850px) {
-    header  {
-        p {
-            font-size: 18px;
-        }
-        .sidepanel {
-            height: 250px; 
-            width: 0; 
-            position: fixed; 
-            z-index: 1; 
-            top: 0;
-            right: 0;
-            background-color: rgba(72, 116, 157, 0.3); /* Black*/
-            overflow-x: hidden; 
-            padding-top: 60px; 
-            transition: 0.5s; 
-            a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 20px;
-                color: rgb(72, 116, 157);
-                display: block;
-                transition: 0.3s;
-                &:hover {
-                    color: #f1f1f1;
-                }
-            }
-        }
-
-        .openbtn, .closebtn {
-            display: block;
-        }
+@import "./mediaQuerries";
 
 
 
-        .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
 
-        .openbtn {
-            font-size: 20px;
-            cursor: pointer;
-            background-color: #111;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            &:hover {
-                background-color: #444;
-            }
-        }
-    }
-
-    #intro {
-        padding: 8vh 8% 0 8%; 
-        margin: 10vh 0; 
-        article {
-            padding: 2vh 0; 
-            h2 {
-                font-size: 1.8em;
-            }
-            h1 {
-                font-size: 1.5em;
-                margin: 2vh 0 3vh 0;
-                color: white; 
-            }
-        }
-    }
-
-    .youAreDeep, .iAmDeep {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-
-    .iAmDeep {
-        p {
-            height: 20vh; 
-        }
-    }
-
-    #aboutMe {
-        margin: 5vh 0; 
-        height: 40vh;
-        overflow: scroll;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    header  {
-        p {
-            font-size: 18px;
-        }
-        nav {
-            display: none; 
-        }
-    }
-
-    #intro {
-        display: block; 
-        padding: 5vh 8% 5vh 8%; 
-        margin: 10vh 0 0 0; 
-        article {
-            width: 100%; 
-            margin-bottom: 5vh;
-        }
-        img {
-            width: 100%; 
-        }
-    }
-
-    .youAreDeep, .iAmDeep {
-        grid-template-columns: repeat(1, 1fr); 
-    }
-
-    #aboutMe {
-        margin: 5vh 0; 
-    }
-
-    #costs {
-        padding: 2vh 8%;
-    }
-
-    footer {
-        article {
-            margin-top: 1vh; 
-        }
-    }
-}
